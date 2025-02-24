@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import 'antd/dist/reset.css'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.righteous-regular {
+  font-family: "Righteous", serif;
+}
+
+.ant-menu {
+  .ant-menu-item-icon {
+    font-size: 20px !important;
+  }
+
+  .ant-menu-title-content {
+    margin-inline-start: 10px;
+    font-size: medium;
+  }
+
+  &.ant-menu-inline-collapsed {
+    .ant-menu-item {
+      padding-inline: calc(50% - 8px - 8px) !important;
+      line-height: 42px !important;
+    }
+  }
+}
+
+.ant-drawer-body {
+  padding: 10px !important;
+}
+
+.circle-checkbox {
+  .ant-checkbox-inner{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    &::after{
+      transform: rotate(45deg) scale(1) translate(-41%,-60%) !important;
+    }
+  }
+}
+
+.custom-checkbox .ant-checkbox-inner {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+}
+
+.custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  width: 24px;
+  height: 24px;
+}
+
+.custom-checkbox .ant-checkbox-inner::after {
+  width: 10px;
+  height: 14px;
+}
+
+:where(.css-dev-only-do-not-override-1htoz2s).ant-segmented.ant-segmented-lg .ant-segmented-item,
+:where(.css-dev-only-do-not-override-1htoz2s).ant-segmented.ant-segmented-lg .ant-segmented-thumb {
+  border-radius: 25px !important;
+}
+
+.ant-segmented-group{
+  .ant-segmented-item-label{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
