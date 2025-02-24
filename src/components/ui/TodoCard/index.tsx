@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react'
 import Icon from '@/components/common/Icon'
-import { Avatar, Badge, Button, Checkbox, Collapse, CollapseProps, Dropdown, MenuProps, Tag } from 'antd'
+import { Avatar, Badge, Button, Dropdown, MenuProps, Tag } from 'antd'
 import { motion } from 'framer-motion';
 
 const TodoCard = () => {
@@ -19,47 +19,47 @@ const TodoCard = () => {
         { key: '3', label: 'Completed', icon: <Icon name="done" />, style: { color: 'green', } },
     ];
 
-    const items: CollapseProps['items'] = [
-        {
-            key: '1',
-            label: <Checkbox className='circle-checkbox !text-lg !font-semibold' >Todo Name</Checkbox>,
-            children: <div>
-                <p className='!text-xs'>
-                    Todo Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a aut dolorem beatae magnam odit neque exercitationem tempore tenetur consequatur.
-                </p>
-                <div className='my-2'>
-                    <div className='flex items-center justify-between'>
-                        <p className='!text-md !font-semibold'>Sub Tasks (3)</p>
-                        <Button shape="round" size='small' type='text'><Icon name="plus" size={20} /></Button>
-                    </div>
-                    <div className='space-y-2 px-2'>
-                        {[1, 2, 3].map((item, index) => (
-                            <div key={index} className='bg-white p-1.5 pl-4 mt-3 rounded-full flex items-center justify-between shadow-sm'>
-                                <Checkbox className='circle-checkbox !text-md !rounded-full'>Sub Task {item}</Checkbox>
-                                <div className='flex items-center gap-2'>
-                                    <Button shape='circle' type='text' size='middle'>
-                                        <Avatar size={25} style={{ backgroundColor: '#87d068' }}>JD</Avatar>
-                                    </Button>
-                                    {/* <Button shape='circle' type='text' size='middle'><Icon name="edit" size={18} /></Button> */}
-                                    <Button shape='circle' type='text' size='middle'><Icon name="more" size={20} /></Button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+    // const items: CollapseProps['items'] = [
+    //     {
+    //         key: '1',
+    //         label: <Checkbox className='circle-checkbox !text-lg !font-semibold' >Todo Name</Checkbox>,
+    //         children: <div>
+    //             <p className='!text-xs'>
+    //                 Todo Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a aut dolorem beatae magnam odit neque exercitationem tempore tenetur consequatur.
+    //             </p>
+    //             <div className='my-2'>
+    //                 <div className='flex items-center justify-between'>
+    //                     <p className='!text-md !font-semibold'>Sub Tasks (3)</p>
+    //                     <Button shape="round" size='small' type='text'><Icon name="plus" size={20} /></Button>
+    //                 </div>
+    //                 <div className='space-y-2 px-2'>
+    //                     {[1, 2, 3].map((item, index) => (
+    //                         <div key={index} className='bg-white p-1.5 pl-4 mt-3 rounded-full flex items-center justify-between shadow-sm'>
+    //                             <Checkbox className='circle-checkbox !text-md !rounded-full'>Sub Task {item}</Checkbox>
+    //                             <div className='flex items-center gap-2'>
+    //                                 <Button shape='circle' type='text' size='middle'>
+    //                                     <Avatar size={25} style={{ backgroundColor: '#87d068' }}>JD</Avatar>
+    //                                 </Button>
+    //                                 {/* <Button shape='circle' type='text' size='middle'><Icon name="edit" size={18} /></Button> */}
+    //                                 <Button shape='circle' type='text' size='middle'><Icon name="more" size={20} /></Button>
+    //                             </div>
+    //                         </div>
+    //                     ))}
+    //                 </div>
+    //             </div>
 
-                <div className='w-full bg-gray-200 p-3 rounded-lg shadow-sm'>
-                    foter
-                </div>
-            </div>,
-            extra: <div className='flex items-center gap-1'>
-                <Tag className='!px-2 !py-[2px] !text-xs !rounded-full font-semibold' color='yellow'>Medium</Tag>
-                <Dropdown menu={{ items: menuItes }}>
-                    <Button shape='circle' type='text' size='small' ><Icon name="more" size={20} /></Button>
-                </Dropdown>
-            </div>
-        }
-    ]
+    //             <div className='w-full bg-gray-200 p-3 rounded-lg shadow-sm'>
+    //                 foter
+    //             </div>
+    //         </div>,
+    //         extra: <div className='flex items-center gap-1'>
+    //             <Tag className='!px-2 !py-[2px] !text-xs !rounded-full font-semibold' color='yellow'>Medium</Tag>
+    //             <Dropdown menu={{ items: menuItes }}>
+    //                 <Button shape='circle' type='text' size='small' ><Icon name="more" size={20} /></Button>
+    //             </Dropdown>
+    //         </div>
+    //     }
+    // ]
     return (
         <>
             {/* <Collapse bordered={false} items={items} /> */}

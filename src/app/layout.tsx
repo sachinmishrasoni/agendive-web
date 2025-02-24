@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+// import { Geist, Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
 // import { getAntdSSRStyles } from "@/lib/antd";

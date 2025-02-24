@@ -63,11 +63,10 @@ const BottomNav = () => {
     const [visibleSlides, setVisibleSlides] = useState(1);
     // const [visibleSlides, setVisibleSlides] = useState(getSlidesPerView(window.innerWidth));
     const [isReady, setIsReady] = useState(false);
-
-    const activeIndex = navItems.findIndex((item) => item.path === pathname);
-    const [activeTab, setActiveTab] = useState(activeIndex >= 0 ? activeIndex : 0);
+    const [activeTab, setActiveTab] = useState(0);
 
     useEffect(() => {
+        const activeIndex = navItems.findIndex((item) => item.path === pathname);
         setActiveTab(activeIndex >= 0 ? activeIndex : 0); // Update state if pathname changes
     }, [pathname]);
 

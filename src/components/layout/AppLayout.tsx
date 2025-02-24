@@ -1,31 +1,29 @@
 "use client";
 import React, { useState } from 'react'
-import { Avatar, Badge, Button, Grid, Layout, Menu, MenuProps, theme, FloatButton } from 'antd'
-import { MdMenu } from 'react-icons/md';
+import { Layout, Menu, MenuProps, theme, FloatButton } from 'antd'
 import Icon from '@/components/common/Icon';
 import { FaVaadin } from 'react-icons/fa6';
 import { IconList } from '@/utils/iconList';
 import { siderStyle } from '@/styles/layoutStyles';
 import { usePathname, useRouter } from 'next/navigation';
 import AppMenuDrawer from '@/components/appMenuDrawer';
-import Sidebar from './Sidebar';
 import Header from './Header';
 import BottomNav from './BottomNav';
 
 
 const { Sider, Content } = Layout;
-const { useBreakpoint } = Grid;
+// const { useBreakpoint } = Grid;
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
     const router = useRouter();
     const pathname = usePathname() || "";
-    const [collapsed, setCollapsed] = useState(true);
+    const [collapsed] = useState(true);
     const [openDrawer, setOpenDrawer] = useState(false);
     const {
-        token: { colorBgContainer, borderRadiusLG },
+        // token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
 
-    const screens = useBreakpoint();
+    // const screens = useBreakpoint();
 
     const items: MenuProps['items'] = [
         {
@@ -68,15 +66,15 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         },
     ];
 
-    const handleMenuBtn = () => {
-        if (screens.md === false) {
-            // Screen is smaller than md breakpoint (mobile)
-            setOpenDrawer(!openDrawer);
-        } else {
-            // Screen is md or larger
-            setCollapsed(!collapsed);
-        }
-    };
+    // const handleMenuBtn = () => {
+    //     if (screens.md === false) {
+    //         // Screen is smaller than md breakpoint (mobile)
+    //         setOpenDrawer(!openDrawer);
+    //     } else {
+    //         // Screen is md or larger
+    //         setCollapsed(!collapsed);
+    //     }
+    // };
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider theme='light' trigger={null} collapsible collapsed={collapsed} style={siderStyle} className='hidden md:block'>

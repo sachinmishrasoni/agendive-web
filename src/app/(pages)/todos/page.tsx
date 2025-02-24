@@ -1,7 +1,7 @@
 "use client";
 import Icon from '@/components/common/Icon'
 import TodoCard from '@/components/ui/TodoCard'
-import { Button, Checkbox, Input, Segmented, Tag } from 'antd'
+import { Button, Checkbox, Input, Segmented } from 'antd'
 import React, { useState } from 'react'
 
 const TodoPage = () => {

@@ -2,7 +2,7 @@ import { BiHomeAlt2 } from "react-icons/bi";
 import { LuListTodo, LuNotebookText, LuLayoutDashboard, LuBell, LuSettings  } from "react-icons/lu";
 import { RiBloggerLine, RiDeleteBinLine, RiSearch2Line } from "react-icons/ri";
 import { CgMenuLeft } from "react-icons/cg";
-import { IoWalletOutline, IoCalendarOutline, IoFilter, IoClose } from "react-icons/io5";
+import { IoWalletOutline, IoCalendarOutline, IoFilter } from "react-icons/io5";
 import { MdLockOutline, MdOutlineLockOpen, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { IoMdMore, IoIosArrowDown, IoIosArrowForward   } from "react-icons/io";
 import { GoPerson, GoHeart, GoHeartFill } from "react-icons/go";
@@ -61,7 +61,7 @@ const IconList = {
     done: MdOutlineCheckCircleOutline,
     people: GoPeople,
     all: HiOutlineQueueList,
-    flag: FaRegFlag
+    flag: FaRegFlag,
 
 };
 

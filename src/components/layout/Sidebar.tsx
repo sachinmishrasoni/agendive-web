@@ -11,7 +11,7 @@ const { Sider } = Layout;
 const Sidebar = () => {
     const router = useRouter();
     const pathname = usePathname() || "";
-    const [collapsed, setCollapsed] = useState(true);
+    const [collapsed] = useState(true);
 
     const items: MenuProps['items'] = [
         {

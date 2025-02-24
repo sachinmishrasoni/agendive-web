@@ -1,12 +1,18 @@
 "use client";
-import { Form, Input, Button, Checkbox, Typography, Divider } from 'antd';
+import { Form, Input, Button, Checkbox, Divider } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { FaVaadin } from 'react-icons/fa6';
 
-const { Title } = Typography;
+// const { Title } = Typography;
+
+interface LoginFormValues {
+  username: string;
+  password: string;
+  remember: boolean;
+}
 
 const LoginPage = () => {
-  const onFinish = (values: any) => {
+  const onFinish = (values: LoginFormValues) => {
     console.log('Received values:', values);
   };
 
@@ -71,7 +77,7 @@ const LoginPage = () => {
         </div>
 
         <div className="text-center mt-4">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <a href="/register" className="text-blue-500">
             Register now!
           </a>
